@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="112.0" prefWidth="601.0" style="-fx-background-color: GREY;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxapp.UserUndefined">
+    <children>
+        <Label fx:id="user" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="86.0" prefWidth="538.0" text="Username not found." textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+    </children>
+
+</AnchorPane>
