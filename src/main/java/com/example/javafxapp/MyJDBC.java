@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class MyJDBC {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+        String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
              Statement statement = connection.createStatement();
@@ -22,9 +22,9 @@ public class MyJDBC {
     }
 
     public static boolean isUsernameTaken(String username) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+        String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT COUNT(*) FROM users WHERE Username = ?";
 
         username = username.toUpperCase();
@@ -43,9 +43,9 @@ public class MyJDBC {
     }
 
     public static boolean isEmailTaken(String email) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+       String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT COUNT(*) FROM users WHERE Email = ?";
 
         email = email.toUpperCase();
@@ -64,9 +64,9 @@ public class MyJDBC {
     }
 
     public static boolean isPhoneTaken(String phone, String countryCode) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+        String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT COUNT(*) FROM users WHERE Phone_number = ?";
 
         phone = countryCode + phone ;
@@ -85,9 +85,9 @@ public class MyJDBC {
     }
 
     public static String getPasswordFromDatabase(String username) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+        String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT Password FROM users WHERE Username = ?";
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -106,9 +106,9 @@ public class MyJDBC {
     }
 
     public static String getEmailFromDatabase(String username) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+       String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT Email FROM users WHERE Username = ?";
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -127,9 +127,9 @@ public class MyJDBC {
     }
 
     public static String getPhoneFromDatabase(String username) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+        String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT Phone_number FROM users WHERE Username = ?";
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -148,9 +148,9 @@ public class MyJDBC {
     }
 
     public static String getUserFromDatabase(String email) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+       String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT Username FROM users WHERE Email = ?";
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -169,9 +169,9 @@ public class MyJDBC {
     }
 
     public static String getCCFromDatabase(String username) {
-        String url = "jdbc:mysql://127.0.0.1:3306/login_schema";
-        String user = "root";
-        String password = "Makuasql@123!";
+       String url = JDBC_URL_PATH;
+        String user = JDBC USER;
+        String password = JDBC_PASSWORD;
         String query = "SELECT Country_code FROM users WHERE Username = ?";
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement(query)) {
